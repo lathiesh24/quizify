@@ -69,7 +69,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
           </TextField>
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             size="large"
             onClick={handleSubmit}
           >

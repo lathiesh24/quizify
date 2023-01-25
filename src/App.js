@@ -7,6 +7,7 @@ import Quiz from "./Pages/Quiz/Quiz";
 import Result from "./Pages/Result/Result";
 import "./App.css";
 import axios from "axios";
+import { height } from "@mui/system";
 
 function App() {
   const [questions, setQuestions] = useState();

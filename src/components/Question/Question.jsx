@@ -66,25 +66,36 @@ const Question = ({
             ))}
         </div>
         <div className="controls">
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            style={{ width: 185 }}
-            href="/"
-            onClick={() => handleQuit()}
-          >
-            Quit
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            style={{ width: 185 }}
-            onClick={handleNext}
-          >
-            {currQues > 20 ? "Submit" : "Next Question"}
-          </Button>
+          
+  <Button
+    variant="contained"
+    color="secondary"
+    size="large"
+    style={
+      window.matchMedia("(max-width: 599px)").matches
+        ? { width: '120px', marginRight: '20px' }
+        : { width: 185 }
+    }
+    href="/"
+    onClick={() => handleQuit()}
+  >
+    Quit
+  </Button>
+  <Button
+    variant="contained"
+    color="secondary"
+    size="large"
+    style={
+      window.matchMedia("(max-width: 599px)").matches
+        ? { width: '120px' }
+        : { width: 185 }
+    }
+    onClick={handleNext}
+  >
+    {currQues > 20 ? "Submit" : "Next Question"}
+  </Button>
+
+
         </div>
       </div>
     </div>
